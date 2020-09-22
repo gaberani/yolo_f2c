@@ -9,6 +9,11 @@ from ..dark.darknet import Darknet
 import json
 import os
 
+# Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX AVX2
+# 에러 메시지를 무시하기 위한 레벨 설정
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+# 만약 다시 빌드한다면 학습 속도가 300% 이상 증가할 수 있다고 함.
+
 class TFNet(object):
 
 	_TRAINER = dict({

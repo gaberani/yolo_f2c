@@ -5,6 +5,10 @@ import numpy
 import os
 import imp
 
+# setup(
+#     ext_modules = cythonize('setup.py', compiler_directives={'language_level': 3}),
+# )
+
 VERSION = imp.load_source('version', os.path.join('.', 'darkflow', 'version.py'))
 VERSION = VERSION.__version__
 
